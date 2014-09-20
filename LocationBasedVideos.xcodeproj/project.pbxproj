@@ -15,6 +15,13 @@
 		0A956C8419CD9653003DD5BE /* LocationBasedVideosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A956C8319CD9653003DD5BE /* LocationBasedVideosTests.m */; };
 		0A956C9019CDB6A5003DD5BE /* StoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A956C8F19CDB6A5003DD5BE /* StoriesViewController.m */; };
 		0A956C9419CDB836003DD5BE /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A956C9319CDB836003DD5BE /* Story.m */; };
+		0A956C9819CDC144003DD5BE /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A956C9719CDC144003DD5BE /* StoryViewController.m */; };
+		0A956C9B19CDC7F8003DD5BE /* SOLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A956C9A19CDC7F8003DD5BE /* SOLabel.m */; };
+		0A956CA419CDCD4E003DD5BE /* Story-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0A956CA119CDCD4E003DD5BE /* Story-1.jpeg */; };
+		0A956CA519CDCD4E003DD5BE /* Story-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0A956CA219CDCD4E003DD5BE /* Story-2.jpeg */; };
+		0A956CA619CDCD4E003DD5BE /* Story-3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0A956CA319CDCD4E003DD5BE /* Story-3.jpeg */; };
+		0A956CA919CDCFAA003DD5BE /* trailer.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0A956CA819CDCFAA003DD5BE /* trailer.mp4 */; };
+		0A956CAB19CDD005003DD5BE /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A956CAA19CDD005003DD5BE /* MediaPlayer.framework */; };
 		C012246F1EAB48F0A07AC18C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A588DEB1F84DF986D6454D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +52,15 @@
 		0A956C9219CDB836003DD5BE /* Story.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Story.h; path = Models/Story.h; sourceTree = "<group>"; };
 		0A956C9319CDB836003DD5BE /* Story.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Story.m; path = Models/Story.m; sourceTree = "<group>"; };
 		0A956C9519CDBD05003DD5BE /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		0A956C9619CDC144003DD5BE /* StoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoryViewController.h; path = Controller/StoryViewController.h; sourceTree = "<group>"; };
+		0A956C9719CDC144003DD5BE /* StoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryViewController.m; path = Controller/StoryViewController.m; sourceTree = "<group>"; };
+		0A956C9919CDC7F8003DD5BE /* SOLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SOLabel.h; path = Helper/SOLabel/SOLabel.h; sourceTree = "<group>"; };
+		0A956C9A19CDC7F8003DD5BE /* SOLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SOLabel.m; path = Helper/SOLabel/SOLabel.m; sourceTree = "<group>"; };
+		0A956CA119CDCD4E003DD5BE /* Story-1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Story-1.jpeg"; path = "Assets/Story-1.jpeg"; sourceTree = "<group>"; };
+		0A956CA219CDCD4E003DD5BE /* Story-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Story-2.jpeg"; path = "Assets/Story-2.jpeg"; sourceTree = "<group>"; };
+		0A956CA319CDCD4E003DD5BE /* Story-3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Story-3.jpeg"; path = "Assets/Story-3.jpeg"; sourceTree = "<group>"; };
+		0A956CA819CDCFAA003DD5BE /* trailer.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = trailer.mp4; path = Assets/trailer.mp4; sourceTree = "<group>"; };
+		0A956CAA19CDD005003DD5BE /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		AF7741BEB05843098632C93B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		E0A588DEB1F84DF986D6454D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -54,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A956CAB19CDD005003DD5BE /* MediaPlayer.framework in Frameworks */,
 				C012246F1EAB48F0A07AC18C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,7 +113,8 @@
 				0A956C7119CD9653003DD5BE /* Main.storyboard */,
 				0A956C8D19CDB668003DD5BE /* Controller */,
 				0A956C9119CDB810003DD5BE /* Model */,
-				0A956C7419CD9653003DD5BE /* Images.xcassets */,
+				0A956C9C19CDC87A003DD5BE /* External */,
+				0A956CA719CDCD54003DD5BE /* Assets */,
 				0A956C7619CD9653003DD5BE /* LaunchScreen.xib */,
 				0A956C6719CD9653003DD5BE /* Supporting Files */,
 			);
@@ -135,6 +153,8 @@
 			children = (
 				0A956C8E19CDB6A5003DD5BE /* StoriesViewController.h */,
 				0A956C8F19CDB6A5003DD5BE /* StoriesViewController.m */,
+				0A956C9619CDC144003DD5BE /* StoryViewController.h */,
+				0A956C9719CDC144003DD5BE /* StoryViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -148,9 +168,31 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		0A956C9C19CDC87A003DD5BE /* External */ = {
+			isa = PBXGroup;
+			children = (
+				0A956C9919CDC7F8003DD5BE /* SOLabel.h */,
+				0A956C9A19CDC7F8003DD5BE /* SOLabel.m */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		0A956CA719CDCD54003DD5BE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0A956C7419CD9653003DD5BE /* Images.xcassets */,
+				0A956CA119CDCD4E003DD5BE /* Story-1.jpeg */,
+				0A956CA219CDCD4E003DD5BE /* Story-2.jpeg */,
+				0A956CA319CDCD4E003DD5BE /* Story-3.jpeg */,
+				0A956CA819CDCFAA003DD5BE /* trailer.mp4 */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		0FD6FE5927F6486FAC396D51 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A956CAA19CDD005003DD5BE /* MediaPlayer.framework */,
 				E0A588DEB1F84DF986D6454D /* libPods.a */,
 			);
 			name = Frameworks;
@@ -239,8 +281,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A956C7319CD9653003DD5BE /* Main.storyboard in Resources */,
+				0A956CA619CDCD4E003DD5BE /* Story-3.jpeg in Resources */,
 				0A956C7819CD9653003DD5BE /* LaunchScreen.xib in Resources */,
 				0A956C7519CD9653003DD5BE /* Images.xcassets in Resources */,
+				0A956CA919CDCFAA003DD5BE /* trailer.mp4 in Resources */,
+				0A956CA519CDCD4E003DD5BE /* Story-2.jpeg in Resources */,
+				0A956CA419CDCD4E003DD5BE /* Story-1.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,8 +337,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A956C9B19CDC7F8003DD5BE /* SOLabel.m in Sources */,
 				0A956C6D19CD9653003DD5BE /* AppDelegate.m in Sources */,
 				0A956C9019CDB6A5003DD5BE /* StoriesViewController.m in Sources */,
+				0A956C9819CDC144003DD5BE /* StoryViewController.m in Sources */,
 				0A956C6A19CD9653003DD5BE /* main.m in Sources */,
 				0A956C9419CDB836003DD5BE /* Story.m in Sources */,
 			);

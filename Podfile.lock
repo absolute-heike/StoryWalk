@@ -1,0 +1,32 @@
+PODS:
+  - CCDataSourceManager (0.0.1):
+    - ReactiveCocoa
+  - DCIntrospect-ARC (0.0.8)
+  - LoremIpsum (1.0.0)
+  - pop (1.0.6)
+  - ReactiveCocoa (2.3.1):
+    - ReactiveCocoa/UI
+  - ReactiveCocoa/Core (2.3.1):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.3.1)
+  - ReactiveCocoa/UI (2.3.1):
+    - ReactiveCocoa/Core
+  - Tweaks (1.1.0)
+
+DEPENDENCIES:
+  - CCDataSourceManager
+  - DCIntrospect-ARC
+  - LoremIpsum
+  - pop
+  - ReactiveCocoa
+  - Tweaks
+
+SPEC CHECKSUMS:
+  CCDataSourceManager: 656118c1fcc53637ea814adfdcf26b953656df5a
+  DCIntrospect-ARC: 89963e8f905ef26eac2884d58eb7021d30b02db0
+  LoremIpsum: a4d378ecaffcb08c7e40cdba3fb935dc41b2272c
+  pop: e518794da38942c05255eb64b36d894e70cb4f00
+  ReactiveCocoa: dca75777b9d18990c8714a3a6f2149f29b4d1462
+  Tweaks: 05b197d4a1247288f576587546bc1932189d8c98
+
+COCOAPODS: 0.33.1

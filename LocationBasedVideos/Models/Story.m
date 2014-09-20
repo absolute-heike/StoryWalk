@@ -18,6 +18,7 @@
     story.ID = ++storyID;
     story.name = [NSString stringWithFormat:@"Story %d",(int)storyID];
     story.storyDescription = [LoremIpsum paragraphsWithNumber:2];
+    story.imageName = [NSString stringWithFormat:@"Story-%d.jpeg",(((int)storyID - 1) % 3) + 1];
     
     return story;
 }

@@ -8,6 +8,8 @@
 
 #import "StoriesViewController.h"
 #import "Story.h"
+#import "StoryViewController.h"
+
 
 @interface StoriesViewController ()<UITableViewDelegate>
 
@@ -27,6 +29,12 @@
         cell.textLabel.text = story.name;
     }];
     
+    [self loadStories:nil];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(loadStories:)];
+}
+
+-(IBAction)loadStories:(id)sender {
     NSMutableArray *stories = [NSMutableArray array];
     for (NSInteger i=0; i<10; ++i) {
         [stories addObject:[Story dummyStory]];
@@ -35,13 +43,14 @@
     self.tableView.dataSourceManager.data = @[ stories ];
 }
 
-
 #pragma mark - User Interaction
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    Story *story = [tableView.dataSourceManager dataForIndexPath:indexPath];
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    Story *story = [self.tableView.dataSourceManager dataForIndexPath:[self.tableView indexPathForCell:sender]];
     
-    
+    StoryViewController *storyViewController = segue.destinationViewController;
+    storyViewController.story                = story;
 }
+
 
 @end
