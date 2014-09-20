@@ -35,12 +35,12 @@
 }
 
 -(IBAction)loadStories:(id)sender {
-    NSMutableArray *stories = [NSMutableArray array];
-    for (NSInteger i=0; i<10; ++i) {
-        [stories addObject:[Story dummyStory]];
-    }
+    [SVProgressHUD showWithStatus:@"Lade Stories in deiner Nähe"];
     
-    self.tableView.dataSourceManager.data = @[ stories ];
+    [Story loadStories:^(NSArray *stories) {
+        [SVProgressHUD dismiss];
+        self.tableView.dataSourceManager.data = @[ stories ];
+    }];
 }
 
 #pragma mark - User Interaction

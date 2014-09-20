@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A5EC7DD19CDD479005C22EB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5EC7DC19CDD479005C22EB /* Default-568h@2x.png */; };
+		0A5EC7E019CDD5E0005C22EB /* TransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EC7DF19CDD5E0005C22EB /* TransitionViewController.m */; };
+		0A5EC7E319CDE371005C22EB /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EC7E219CDE371005C22EB /* VideoViewController.m */; };
+		0A5EC7E619CDE73C005C22EB /* Pool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EC7E519CDE73C005C22EB /* Pool.m */; };
+		0A5EC7E919CDE74A005C22EB /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EC7E819CDE74A005C22EB /* Video.m */; };
+		0A5EC7EC19CDE75F005C22EB /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EC7EB19CDE75F005C22EB /* Comment.m */; };
+		0A5EC7EF19CDEBD6005C22EB /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EC7EE19CDEBD6005C22EB /* Place.m */; };
 		0A956C6A19CD9653003DD5BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A956C6919CD9653003DD5BE /* main.m */; };
 		0A956C6D19CD9653003DD5BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A956C6C19CD9653003DD5BE /* AppDelegate.m */; };
 		0A956C7319CD9653003DD5BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A956C7119CD9653003DD5BE /* Main.storyboard */; };
@@ -36,6 +43,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A5EC7DC19CDD479005C22EB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		0A5EC7DE19CDD5E0005C22EB /* TransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransitionViewController.h; path = Controller/TransitionViewController.h; sourceTree = "<group>"; };
+		0A5EC7DF19CDD5E0005C22EB /* TransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransitionViewController.m; path = Controller/TransitionViewController.m; sourceTree = "<group>"; };
+		0A5EC7E119CDE371005C22EB /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoViewController.h; path = Controller/VideoViewController.h; sourceTree = "<group>"; };
+		0A5EC7E219CDE371005C22EB /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoViewController.m; path = Controller/VideoViewController.m; sourceTree = "<group>"; };
+		0A5EC7E419CDE73C005C22EB /* Pool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pool.h; path = Models/Pool.h; sourceTree = "<group>"; };
+		0A5EC7E519CDE73C005C22EB /* Pool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pool.m; path = Models/Pool.m; sourceTree = "<group>"; };
+		0A5EC7E719CDE74A005C22EB /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		0A5EC7E819CDE74A005C22EB /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		0A5EC7EA19CDE75F005C22EB /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		0A5EC7EB19CDE75F005C22EB /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		0A5EC7ED19CDEBD6005C22EB /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Place.h; path = Models/Place.h; sourceTree = "<group>"; };
+		0A5EC7EE19CDEBD6005C22EB /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Place.m; path = Models/Place.m; sourceTree = "<group>"; };
 		0A956C6419CD9653003DD5BE /* LocationBasedVideos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationBasedVideos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A956C6819CD9653003DD5BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A956C6919CD9653003DD5BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -155,6 +175,10 @@
 				0A956C8F19CDB6A5003DD5BE /* StoriesViewController.m */,
 				0A956C9619CDC144003DD5BE /* StoryViewController.h */,
 				0A956C9719CDC144003DD5BE /* StoryViewController.m */,
+				0A5EC7DE19CDD5E0005C22EB /* TransitionViewController.h */,
+				0A5EC7DF19CDD5E0005C22EB /* TransitionViewController.m */,
+				0A5EC7E119CDE371005C22EB /* VideoViewController.h */,
+				0A5EC7E219CDE371005C22EB /* VideoViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -164,6 +188,14 @@
 			children = (
 				0A956C9219CDB836003DD5BE /* Story.h */,
 				0A956C9319CDB836003DD5BE /* Story.m */,
+				0A5EC7E419CDE73C005C22EB /* Pool.h */,
+				0A5EC7E519CDE73C005C22EB /* Pool.m */,
+				0A5EC7E719CDE74A005C22EB /* Video.h */,
+				0A5EC7E819CDE74A005C22EB /* Video.m */,
+				0A5EC7ED19CDEBD6005C22EB /* Place.h */,
+				0A5EC7EE19CDEBD6005C22EB /* Place.m */,
+				0A5EC7EA19CDE75F005C22EB /* Comment.h */,
+				0A5EC7EB19CDE75F005C22EB /* Comment.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -180,6 +212,7 @@
 		0A956CA719CDCD54003DD5BE /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				0A5EC7DC19CDD479005C22EB /* Default-568h@2x.png */,
 				0A956C7419CD9653003DD5BE /* Images.xcassets */,
 				0A956CA119CDCD4E003DD5BE /* Story-1.jpeg */,
 				0A956CA219CDCD4E003DD5BE /* Story-2.jpeg */,
@@ -285,6 +318,7 @@
 				0A956C7819CD9653003DD5BE /* LaunchScreen.xib in Resources */,
 				0A956C7519CD9653003DD5BE /* Images.xcassets in Resources */,
 				0A956CA919CDCFAA003DD5BE /* trailer.mp4 in Resources */,
+				0A5EC7DD19CDD479005C22EB /* Default-568h@2x.png in Resources */,
 				0A956CA519CDCD4E003DD5BE /* Story-2.jpeg in Resources */,
 				0A956CA419CDCD4E003DD5BE /* Story-1.jpeg in Resources */,
 			);
@@ -338,11 +372,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A956C9B19CDC7F8003DD5BE /* SOLabel.m in Sources */,
+				0A5EC7E019CDD5E0005C22EB /* TransitionViewController.m in Sources */,
 				0A956C6D19CD9653003DD5BE /* AppDelegate.m in Sources */,
+				0A5EC7EF19CDEBD6005C22EB /* Place.m in Sources */,
+				0A5EC7EC19CDE75F005C22EB /* Comment.m in Sources */,
+				0A5EC7E919CDE74A005C22EB /* Video.m in Sources */,
 				0A956C9019CDB6A5003DD5BE /* StoriesViewController.m in Sources */,
 				0A956C9819CDC144003DD5BE /* StoryViewController.m in Sources */,
 				0A956C6A19CD9653003DD5BE /* main.m in Sources */,
+				0A5EC7E319CDE371005C22EB /* VideoViewController.m in Sources */,
 				0A956C9419CDB836003DD5BE /* Story.m in Sources */,
+				0A5EC7E619CDE73C005C22EB /* Pool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +507,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = LocationBasedVideos/PrefixHeader.pch;
 				INFOPLIST_FILE = LocationBasedVideos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -479,6 +520,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = LocationBasedVideos/PrefixHeader.pch;
 				INFOPLIST_FILE = LocationBasedVideos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -497,6 +539,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = LocationBasedVideosTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocationBasedVideos.app/LocationBasedVideos";
@@ -512,6 +555,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = LocationBasedVideosTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocationBasedVideos.app/LocationBasedVideos";

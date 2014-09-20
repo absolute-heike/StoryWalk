@@ -6,3 +6,6 @@ pod 'Tweaks'
 pod 'CCDataSourceManager'
 pod 'DCIntrospect-ARC'
 pod 'LoremIpsum'
+pod 'BlurImageProcessor'
+pod 'SVProgressHUD'
+

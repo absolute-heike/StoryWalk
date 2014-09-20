@@ -11,16 +11,39 @@
 
 @implementation Story
 
-+ (instancetype)dummyStory {
-    Story *story = [Story new];
++ (void)loadStories:(void (^)(NSArray *stories))completion {
+    NSURL *url = [NSURL URLWithString:@"https://storywalk.azure-mobile.net/api/story/"];
+    [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:url]
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                               NSError *error = nil;
+                               NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+                               
+                               if(!error){
+                                   NSArray *storiesDict = dict[@"stories"];
+                                   NSMutableArray *stories = [NSMutableArray array];
+                                   
+                                   for (NSDictionary *storyDict in storiesDict) {
+                                       Story *story = [Story new];
+                                       [story setupFromData:storyDict];
+                                       
+                                       [stories addObject:story];
+                                   }
+                                   
+                                   completion(stories);
+                               }else {
+                                   completion( @[] );
+                               }
+    }];
+}
+
+- (void)setupFromData:(NSDictionary *)data {
+    self.storyID          = data[@"story_id"];
+    self.storyDescription = data[@"story_description"];
+    self.name             = data[@"story_name"];
+    self.trailerURL       = [NSURL URLWithString:data[@"story_id"]];
     
-    static NSInteger storyID = 0;
-    story.ID = ++storyID;
-    story.name = [NSString stringWithFormat:@"Story %d",(int)storyID];
-    story.storyDescription = [LoremIpsum paragraphsWithNumber:2];
-    story.imageName = [NSString stringWithFormat:@"Story-%d.jpeg",(((int)storyID - 1) % 3) + 1];
-    
-    return story;
+    self.imageName        = @"Story-2.jpeg";
 }
 
 @end

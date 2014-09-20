@@ -9,6 +9,7 @@
 #import "StoryViewController.h"
 #import "SOLabel.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "TransitionViewController.h"
 
 
 @interface StoryViewController ()
@@ -26,28 +27,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = self.story.name;
+    self.title                 = self.story.name;
     self.descriptionLabel.text = self.story.storyDescription;
-    self.imageView.image = [UIImage imageNamed:self.story.imageName];
+    self.imageView.image       = [UIImage imageNamed:self.story.imageName];
 }
 
 
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    UINavigationController *navController = segue.destinationViewController;
+    TransitionViewController *controller  = (TransitionViewController *)navController.topViewController;
     
+    controller.story = self.story;
 }
 
 - (IBAction)didTapTrailerButton:(UIButton *)sender {
-    NSLog(@"Start Trailer");
     NSString *path = [[NSBundle mainBundle]pathForResource:@"trailer" ofType:@"mp4"];
     MPMoviePlayerViewController *movieController = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL fileURLWithPath:path]];
     
     [self presentViewController:movieController animated:YES completion:nil];
-}
-
-- (IBAction)didTapStartButton:(UIButton *)sender {
-    NSLog(@"Start Story");
 }
 
 @end
