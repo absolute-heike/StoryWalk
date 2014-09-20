@@ -16,6 +16,8 @@
 
 @property (nonatomic, strong) NSString *videoID;
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSURL    *videoURL;
+@property (nonatomic, strong) NSString *videoName;
+
+-(void)setupFromData:(NSDictionary *)data;
 
 @end

@@ -10,12 +10,16 @@
 
 @interface Story : NSObject
 
+@property (nonatomic, strong) NSArray  *pools;
+
 @property (nonatomic, strong) NSString *storyID;
 @property (nonatomic, strong) NSString *imageName;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *storyDescription;
-@property (nonatomic, strong) NSURL    *trailerURL;
+@property (nonatomic, strong) NSString *trailerName;
 
 + (void)loadStories:(void (^)(NSArray *stories))completion;
+
+- (void)loadStory:(void (^)(NSArray *pools))completion;
 
 @end

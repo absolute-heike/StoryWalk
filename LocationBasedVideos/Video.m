@@ -9,7 +9,12 @@
 #import "Video.h"
 
 
-
 @implementation Video
+
+-(void)setupFromData:(NSDictionary *)data {
+    self.videoID   = data[@"video_id"];
+    self.name      = data[@"video_name"];
+    self.videoName = data[@"video_url"];
+}
 
 @end

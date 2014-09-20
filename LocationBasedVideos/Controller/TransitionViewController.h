@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Story.h"
+#import "Pool.h"
 
 
 @interface TransitionViewController : UIViewController
 
-@property (nonatomic, strong) Story *story;
+@property (nonatomic, strong) Pool *pool;
 
 @end

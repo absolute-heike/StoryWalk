@@ -10,4 +10,11 @@
 
 @implementation Place
 
+-(void)setupFromData:(NSDictionary *)data {
+    self.placeID    = data[@"place_id"];
+    self.beaconUDID = data[@"beacon_id"];
+    self.name       = data[@"place_name"];
+    self.videoID    = data[@"video"];
+}
+
 @end

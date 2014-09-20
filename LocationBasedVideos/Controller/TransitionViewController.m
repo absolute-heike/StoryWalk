@@ -9,12 +9,14 @@
 #import "TransitionViewController.h"
 #import <BlurImageProcessor/ALDBlurImageProcessor.h>
 #import "SOLabel.h"
+#import "Video.h"
+
 
 @interface TransitionViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *videoButtons;
-@property (weak, nonatomic) IBOutlet SOLabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 
 @end
 
@@ -25,21 +27,30 @@
 {
     [super viewDidLoad];
     
-    self.title                 = self.story.name;
-    self.descriptionLabel.text = self.story.storyDescription;
+    self.title                 = self.pool.story.name;
+    self.descriptionLabel.text = self.pool.transitionText;
     
-    UIImage *backgroundImage = [UIImage imageNamed:self.story.imageName];
+    UIImage *backgroundImage = [UIImage imageNamed:self.pool.story.imageName];
     [[[ALDBlurImageProcessor alloc] initWithImage:backgroundImage] asyncBlurWithRadius:40.0 iterations:4 successBlock:^(UIImage *blurredImage) {
         self.imageView.image = blurredImage;
     } errorBlock:^(NSNumber *errorCode) {
         
     }];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Schließen" style:UIBarButtonItemStyleBordered target:self action:@selector(didTapCloseButton:)];
+    if(self.navigationController.viewControllers[0] == self){
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Schließen" style:UIBarButtonItemStyleBordered target:self action:@selector(didTapCloseButton:)];
+    }
     
-    for (UIButton *button in self.videoButtons) {
-        button.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.2];
-        button.layer.cornerRadius = 4.0;
+    for (NSInteger i=0;i<self.videoButtons.count;++i) {
+        UIButton *button = self.videoButtons[i];
+        Video *video = self.pool.videos[i];
+        
+        button.backgroundColor          = [UIColor colorWithWhite:1.0 alpha:0.2];
+        button.layer.cornerRadius       = 4.0;
+        button.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        button.titleLabel.textAlignment = NSTextAlignmentCenter;
+        
+        [button setTitle:video.place.name forState:UIControlStateNormal];
     }
 }
 

@@ -34,6 +34,12 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(loadStories:)];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
+}
+
 -(IBAction)loadStories:(id)sender {
     [SVProgressHUD showWithStatus:@"Lade Stories in deiner Nähe"];
     
@@ -42,6 +48,7 @@
         self.tableView.dataSourceManager.data = @[ stories ];
     }];
 }
+
 
 #pragma mark - User Interaction
 

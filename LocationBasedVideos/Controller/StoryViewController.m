@@ -30,6 +30,10 @@
     self.title                 = self.story.name;
     self.descriptionLabel.text = self.story.storyDescription;
     self.imageView.image       = [UIImage imageNamed:self.story.imageName];
+    
+    [self.story loadStory:^(NSArray *pools) {
+        NSLog(@"Story is loaded");
+    }];
 }
 
 
@@ -39,14 +43,18 @@
     UINavigationController *navController = segue.destinationViewController;
     TransitionViewController *controller  = (TransitionViewController *)navController.topViewController;
     
-    controller.story = self.story;
+    controller.pool = self.story.pools[0];
 }
 
 - (IBAction)didTapTrailerButton:(UIButton *)sender {
-    NSString *path = [[NSBundle mainBundle]pathForResource:@"trailer" ofType:@"mp4"];
-    MPMoviePlayerViewController *movieController = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL fileURLWithPath:path]];
+    NSArray *fileComponents = [self.story.trailerName componentsSeparatedByString:@"."];
     
-    [self presentViewController:movieController animated:YES completion:nil];
+    NSString *path = [[NSBundle mainBundle]pathForResource:fileComponents[0] ofType:fileComponents[1]];
+    NSURL *url     = [NSURL fileURLWithPath:path];
+    
+    MPMoviePlayerViewController *movieController = [[MPMoviePlayerViewController alloc] initWithContentURL:url];
+    
+    [self presentMoviePlayerViewControllerAnimated:movieController];
 }
 
 @end

@@ -17,5 +17,8 @@
 @property (nonatomic, strong) NSString  *placeID;
 @property (nonatomic, strong) NSString  *beaconUDID;
 @property (nonatomic, strong) NSString  *name;
+@property (nonatomic, strong) NSString  *videoID;
+
+-(void)setupFromData:(NSDictionary *)data;
 
 @end
