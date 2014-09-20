@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  StoriesViewController.h
 //  LocationBasedVideos
 //
 //  Created by Michael Berg on 20.09.14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface StoriesViewController : UIViewController
 
 @end
-

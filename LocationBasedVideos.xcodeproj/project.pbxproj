@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		0A956C6A19CD9653003DD5BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A956C6919CD9653003DD5BE /* main.m */; };
 		0A956C6D19CD9653003DD5BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A956C6C19CD9653003DD5BE /* AppDelegate.m */; };
-		0A956C7019CD9653003DD5BE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A956C6F19CD9653003DD5BE /* ViewController.m */; };
 		0A956C7319CD9653003DD5BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A956C7119CD9653003DD5BE /* Main.storyboard */; };
 		0A956C7519CD9653003DD5BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A956C7419CD9653003DD5BE /* Images.xcassets */; };
 		0A956C7819CD9653003DD5BE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A956C7619CD9653003DD5BE /* LaunchScreen.xib */; };
 		0A956C8419CD9653003DD5BE /* LocationBasedVideosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A956C8319CD9653003DD5BE /* LocationBasedVideosTests.m */; };
+		0A956C9019CDB6A5003DD5BE /* StoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A956C8F19CDB6A5003DD5BE /* StoriesViewController.m */; };
+		0A956C9419CDB836003DD5BE /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A956C9319CDB836003DD5BE /* Story.m */; };
+		C012246F1EAB48F0A07AC18C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A588DEB1F84DF986D6454D /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,19 @@
 		0A956C6919CD9653003DD5BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0A956C6B19CD9653003DD5BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0A956C6C19CD9653003DD5BE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0A956C6E19CD9653003DD5BE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0A956C6F19CD9653003DD5BE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0A956C7219CD9653003DD5BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A956C7419CD9653003DD5BE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0A956C7719CD9653003DD5BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		0A956C7D19CD9653003DD5BE /* LocationBasedVideosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationBasedVideosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A956C8219CD9653003DD5BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A956C8319CD9653003DD5BE /* LocationBasedVideosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationBasedVideosTests.m; sourceTree = "<group>"; };
+		0A956C8E19CDB6A5003DD5BE /* StoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoriesViewController.h; path = Controller/StoriesViewController.h; sourceTree = "<group>"; };
+		0A956C8F19CDB6A5003DD5BE /* StoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoriesViewController.m; path = Controller/StoriesViewController.m; sourceTree = "<group>"; };
+		0A956C9219CDB836003DD5BE /* Story.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Story.h; path = Models/Story.h; sourceTree = "<group>"; };
+		0A956C9319CDB836003DD5BE /* Story.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Story.m; path = Models/Story.m; sourceTree = "<group>"; };
+		0A956C9519CDBD05003DD5BE /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		AF7741BEB05843098632C93B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		E0A588DEB1F84DF986D6454D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C012246F1EAB48F0A07AC18C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +74,8 @@
 				0A956C6619CD9653003DD5BE /* LocationBasedVideos */,
 				0A956C8019CD9653003DD5BE /* LocationBasedVideosTests */,
 				0A956C6519CD9653003DD5BE /* Products */,
+				AF7741BEB05843098632C93B /* Pods.xcconfig */,
+				0FD6FE5927F6486FAC396D51 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,9 +93,9 @@
 			children = (
 				0A956C6B19CD9653003DD5BE /* AppDelegate.h */,
 				0A956C6C19CD9653003DD5BE /* AppDelegate.m */,
-				0A956C6E19CD9653003DD5BE /* ViewController.h */,
-				0A956C6F19CD9653003DD5BE /* ViewController.m */,
 				0A956C7119CD9653003DD5BE /* Main.storyboard */,
+				0A956C8D19CDB668003DD5BE /* Controller */,
+				0A956C9119CDB810003DD5BE /* Model */,
 				0A956C7419CD9653003DD5BE /* Images.xcassets */,
 				0A956C7619CD9653003DD5BE /* LaunchScreen.xib */,
 				0A956C6719CD9653003DD5BE /* Supporting Files */,
@@ -98,6 +108,7 @@
 			children = (
 				0A956C6819CD9653003DD5BE /* Info.plist */,
 				0A956C6919CD9653003DD5BE /* main.m */,
+				0A956C9519CDBD05003DD5BE /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -119,6 +130,32 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0A956C8D19CDB668003DD5BE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0A956C8E19CDB6A5003DD5BE /* StoriesViewController.h */,
+				0A956C8F19CDB6A5003DD5BE /* StoriesViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0A956C9119CDB810003DD5BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A956C9219CDB836003DD5BE /* Story.h */,
+				0A956C9319CDB836003DD5BE /* Story.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0FD6FE5927F6486FAC396D51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0A588DEB1F84DF986D6454D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A956C8719CD9653003DD5BE /* Build configuration list for PBXNativeTarget "LocationBasedVideos" */;
 			buildPhases = (
+				B2E0BB48A7C84B94B9694E97 /* Check Pods Manifest.lock */,
 				0A956C6019CD9653003DD5BE /* Sources */,
 				0A956C6119CD9653003DD5BE /* Frameworks */,
 				0A956C6219CD9653003DD5BE /* Resources */,
+				478D0C66B3CF47CFBF597363 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,14 +253,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		478D0C66B3CF47CFBF597363 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2E0BB48A7C84B94B9694E97 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0A956C6019CD9653003DD5BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A956C7019CD9653003DD5BE /* ViewController.m in Sources */,
 				0A956C6D19CD9653003DD5BE /* AppDelegate.m in Sources */,
+				0A956C9019CDB6A5003DD5BE /* StoriesViewController.m in Sources */,
 				0A956C6A19CD9653003DD5BE /* main.m in Sources */,
+				0A956C9419CDB836003DD5BE /* Story.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,8 +414,10 @@
 		};
 		0A956C8819CD9653003DD5BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF7741BEB05843098632C93B /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = LocationBasedVideos/PrefixHeader.pch;
 				INFOPLIST_FILE = LocationBasedVideos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -351,8 +426,10 @@
 		};
 		0A956C8919CD9653003DD5BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF7741BEB05843098632C93B /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = LocationBasedVideos/PrefixHeader.pch;
 				INFOPLIST_FILE = LocationBasedVideos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,6 +489,7 @@
 				0A956C8919CD9653003DD5BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A956C8A19CD9653003DD5BE /* Build configuration list for PBXNativeTarget "LocationBasedVideosTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +498,7 @@
 				0A956C8C19CD9653003DD5BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
