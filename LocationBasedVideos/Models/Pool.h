@@ -16,6 +16,8 @@
 @property (nonatomic, strong) Story   *story;
 @property (nonatomic, strong) NSArray *videos;
 
+@property (nonatomic, strong) NSMutableSet *unwatchedVideos;
+
 @property (nonatomic, strong) NSString *poolID;
 @property                     NSInteger sequenceNumber;
 @property (nonatomic, strong) NSString *transitionText;

@@ -19,6 +19,11 @@
     [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:url]
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                               if (connectionError) {
+                                   completion( @[] );
+                                   return;
+                               }
+                               
                                NSError *error = nil;
                                NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
                                
@@ -52,6 +57,11 @@
                                if(!error){
                                    //Parse Videos
                                    NSArray *videosArray        = dict[@"videos"];
+                                   if (!videosArray) {
+                                       completion( @[] );
+                                       return;
+                                   }
+                                   
                                    NSMutableDictionary *videos = [NSMutableDictionary dictionary];
                                    
                                    for (NSDictionary *videoDict in videosArray) {
@@ -68,6 +78,7 @@
                                        Place *place = [Place new];
                                        
                                        [place setupFromData:placeDict];
+                                       
                                        Video *video = videos[place.videoID];
                                        video.place = place;
                                    }

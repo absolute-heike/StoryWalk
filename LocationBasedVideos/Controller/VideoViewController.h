@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Video.h"
 
 @interface VideoViewController : UIViewController
+
+@property (nonatomic, strong) Video *video;
 
 @end

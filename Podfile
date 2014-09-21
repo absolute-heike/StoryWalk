@@ -8,4 +8,4 @@ pod 'DCIntrospect-ARC'
 pod 'LoremIpsum'
 pod 'BlurImageProcessor'
 pod 'SVProgressHUD'
-
+pod 'EstimoteSDK'

@@ -7,6 +7,8 @@
 //
 
 #import "Pool.h"
+#import "Video.h"
+
 
 @implementation Pool
 
@@ -15,10 +17,15 @@
     self.sequenceNumber = [data[@"pool_sequence_nr"] integerValue];
     self.transitionText = data[@"transition_text"];
     
+    self.unwatchedVideos = [NSMutableSet set];
     NSArray *videoIDs          = data[@"videos"];
     NSMutableArray *poolVideos = [NSMutableArray array];
     for (NSString *videoID in videoIDs) {
-        [poolVideos addObject:videos[videoID]];
+        Video *video = videos[videoID];
+        video.pool   = self;
+        
+        [poolVideos addObject:video];
+        [self.unwatchedVideos addObject:video];
     }
     self.videos = poolVideos;
 }

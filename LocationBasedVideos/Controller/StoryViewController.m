@@ -30,14 +30,22 @@
     self.title                 = self.story.name;
     self.descriptionLabel.text = self.story.storyDescription;
     self.imageView.image       = [UIImage imageNamed:self.story.imageName];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     
+    [SVProgressHUD showWithStatus:@"Lade Daten"];
     [self.story loadStory:^(NSArray *pools) {
-        NSLog(@"Story is loaded");
+        [SVProgressHUD dismiss];
     }];
 }
 
-
 #pragma mark - Navigation
+
+-(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+    return self.story.pools.count != 0;
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     UINavigationController *navController = segue.destinationViewController;

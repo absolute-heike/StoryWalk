@@ -3,6 +3,7 @@ PODS:
   - CCDataSourceManager (0.0.1):
     - ReactiveCocoa
   - DCIntrospect-ARC (0.0.8)
+  - EstimoteSDK (2.1.1)
   - LoremIpsum (1.0.0)
   - pop (1.0.6)
   - ReactiveCocoa (2.3.1):
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - BlurImageProcessor
   - CCDataSourceManager
   - DCIntrospect-ARC
+  - EstimoteSDK
   - LoremIpsum
   - pop
   - ReactiveCocoa
@@ -29,6 +31,7 @@ SPEC CHECKSUMS:
   BlurImageProcessor: 287a860dbf21c75e9d6217ea9676c8112abe5c16
   CCDataSourceManager: 656118c1fcc53637ea814adfdcf26b953656df5a
   DCIntrospect-ARC: 89963e8f905ef26eac2884d58eb7021d30b02db0
+  EstimoteSDK: 70f22524782f5b1993dab44bb89ee2fbfced4dca
   LoremIpsum: a4d378ecaffcb08c7e40cdba3fb935dc41b2272c
   pop: e518794da38942c05255eb64b36d894e70cb4f00
   ReactiveCocoa: dca75777b9d18990c8714a3a6f2149f29b4d1462

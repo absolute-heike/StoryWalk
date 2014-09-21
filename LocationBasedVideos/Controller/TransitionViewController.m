@@ -10,6 +10,7 @@
 #import <BlurImageProcessor/ALDBlurImageProcessor.h>
 #import "SOLabel.h"
 #import "Video.h"
+#import "VideoViewController.h"
 
 
 @interface TransitionViewController ()
@@ -60,15 +61,15 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    VideoViewController *controller = segue.destinationViewController;
+    controller.video                = self.pool.videos[[self.videoButtons indexOfObject:sender]];;
 }
-*/
+
 
 @end

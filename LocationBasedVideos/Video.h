@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "Place.h"
-
+#import "Pool.h"
 
 @interface Video : NSObject
 
 @property (nonatomic, strong) Place *place;
+@property (nonatomic, strong) Pool *pool;
 
 @property (nonatomic, strong) NSString *videoID;
 @property (nonatomic, strong) NSString *name;
