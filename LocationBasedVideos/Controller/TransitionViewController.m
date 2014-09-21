@@ -28,8 +28,9 @@
 {
     [super viewDidLoad];
     
-    self.title                 = self.pool.story.name;
-    self.descriptionLabel.text = self.pool.transitionText;
+    self.title                          = self.pool.story.name;
+    self.descriptionLabel.text          = self.pool.transitionText;
+    self.navigationItem.hidesBackButton = TRUE;
     
     UIImage *backgroundImage = [UIImage imageNamed:self.pool.story.imageName];
     if (backgroundImage) {
@@ -45,6 +46,7 @@
     }
     
     if (self.pool.videos.count < 2) {
+        //hack to remove the second button, in case, there is only one video
         UIButton *videoButton1 = self.videoButtons[0];
         UIButton *videoButton2 = self.videoButtons[1];
         
@@ -82,7 +84,6 @@
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     VideoViewController *controller = segue.destinationViewController;

@@ -13,11 +13,11 @@
 @implementation Pool
 
 - (void)setupFromData:(NSDictionary *)data videos:(NSDictionary *)videos {
-    self.poolID         = data[@"pool_id"];
-    self.sequenceNumber = [data[@"pool_sequence_nr"] integerValue];
-    self.transitionText = data[@"transition_text"];
-    
+    self.poolID          = data[@"pool_id"];
+    self.sequenceNumber  = [data[@"pool_sequence_nr"] integerValue];
+    self.transitionText  = data[@"transition_text"];
     self.unwatchedVideos = [NSMutableSet set];
+
     NSArray *videoIDs          = data[@"videos"];
     NSMutableArray *poolVideos = [NSMutableArray array];
     for (NSString *videoID in videoIDs) {
@@ -25,7 +25,6 @@
         video.pool   = self;
         
         [poolVideos addObject:video];
-        [self.unwatchedVideos addObject:video];
     }
     self.videos = poolVideos;
 }

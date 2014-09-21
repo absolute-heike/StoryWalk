@@ -17,9 +17,11 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *storyDescription;
 @property (nonatomic, strong) NSString *trailerName;
+@property (nonatomic, strong) NSString *successText;
 
 + (void)loadStories:(void (^)(NSArray *stories))completion;
 
 - (void)loadStory:(void (^)(NSArray *pools))completion;
+- (void)reset;
 
 @end

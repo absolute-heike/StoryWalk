@@ -10,6 +10,8 @@
 
 @interface SuccessViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *successLabel;
+
 @end
 
 @implementation SuccessViewController
@@ -17,7 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    self.navigationItem.hidesBackButton = TRUE;
+    self.successLabel.text              = self.story.successText;
 }
 
 - (IBAction)didTapReturnButton:(id)sender {

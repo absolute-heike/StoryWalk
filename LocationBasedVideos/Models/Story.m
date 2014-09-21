@@ -46,6 +46,11 @@
 }
 
 - (void)loadStory:(void (^)(NSArray *pools))completion {
+    if (self.pools.count != 0) {
+        completion(self.pools);
+        return;
+    }
+    
     NSString *urlString = [NSString stringWithFormat:@"https://storywalk.azure-mobile.net/api/story?id=%@",self.storyID];
     NSURL *url = [NSURL URLWithString:urlString];
     [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:url]
@@ -114,8 +119,14 @@
     self.storyDescription = data[@"story_description"];
     self.name             = data[@"story_name"];
     self.trailerName      = data[@"story_trailer"];
-    
     self.imageName        = data[@"story_img"];
+    self.successText      = @"Danke Kommisar! Du hast Waldi gefunden! Möge er in Frieden Ruhen.";
+}
+
+- (void)reset {
+    for (Pool *pool in self.pools) {
+        [pool.unwatchedVideos addObjectsFromArray:pool.videos];
+    }
 }
 
 @end

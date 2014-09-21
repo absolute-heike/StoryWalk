@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Story.h"
+
 
 @interface SuccessViewController : UIViewController
+
+@property (nonatomic, strong) Story *story;
 
 @end

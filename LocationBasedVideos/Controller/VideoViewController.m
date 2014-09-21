@@ -11,6 +11,7 @@
 #import <pop/POP.h>
 #import <MediaPlayer/MediaPlayer.h>
 #import "TransitionViewController.h"
+#import "SuccessViewController.h"
 
 
 @interface VideoViewController ()<CLLocationManagerDelegate>
@@ -32,23 +33,21 @@
 {
     [super viewDidLoad];
     
+    self.title = self.video.place.name;
+    
     self.successView.hidden = TRUE;
     self.signalStrenghtView.layer.cornerRadius = self.signalStrenghtView.frame.size.width / 2.0;
     
-    // Initialize location manager and set ourselves as the delegate
-    self.locationManager = [[CLLocationManager alloc] init];
+    // iBeacon detection
+    self.locationManager          = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     
-    // Create a NSUUID with the same UUID as the broadcasting beacon
-    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:self.video.place.beaconUDID];
-    
-    // Setup a new region with that UUID and same identifier as the broadcasting beacon
-    
+    NSUUID *uuid        = [[NSUUID alloc] initWithUUIDString:self.video.place.beaconUDID];
     self.myBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid
                                                                   major:self.video.place.beaconMajor
                                                                   minor:self.video.place.beaconMinor
                                                              identifier:@"de.couchfunk.testregion"];
-    // Tell location manager to start monitoring for the beacon region
+    
     [self.locationManager startRangingBeaconsInRegion:self.myBeaconRegion];
 }
 
@@ -86,7 +85,6 @@
         
         distance = (100 - rssi) / 3.0;
     }
-    NSLog(@"Distance %f",distance);
     
     if (distance > 7.0) {
         distance = 100.0;
@@ -113,17 +111,6 @@
     animation.toValue = [NSValue valueWithCGPoint:CGPointMake(distance, distance)];
 }
 
-- (IBAction)didTapPlayButton:(id)sender {
-    NSArray *fileComponents = [self.video.videoName componentsSeparatedByString:@"."];
-    
-    NSString *path = [[NSBundle mainBundle]pathForResource:fileComponents[0] ofType:fileComponents[1]];
-    NSURL *url     = [NSURL fileURLWithPath:path];
-    
-    MPMoviePlayerViewController *movieController = [[MPMoviePlayerViewController alloc] initWithContentURL:url];
-    
-    [self presentMoviePlayerViewControllerAnimated:movieController];
-}
-
 
 #pragma mark - Navigation
 
@@ -137,8 +124,21 @@
         }else{
             controller.pool = self.video.pool;
         }
+    }else {
+        SuccessViewController *controller = segue.destinationViewController;
+        controller.story                  = self.video.pool.story;
     }
 }
 
+- (IBAction)didTapPlayButton:(id)sender {
+    NSArray *fileComponents = [self.video.videoName componentsSeparatedByString:@"."];
+    
+    NSString *path = [[NSBundle mainBundle]pathForResource:fileComponents[0] ofType:fileComponents[1]];
+    NSURL *url     = [NSURL fileURLWithPath:path];
+    
+    MPMoviePlayerViewController *movieController = [[MPMoviePlayerViewController alloc] initWithContentURL:url];
+    
+    [self presentMoviePlayerViewControllerAnimated:movieController];
+}
 
 @end

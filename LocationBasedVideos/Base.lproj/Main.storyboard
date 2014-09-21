@@ -211,7 +211,7 @@
                                             <action selector="didTapTrailerButton:" destination="3u2-2s-ZNZ" eventType="touchUpInside" id="HlW-UZ-bzU"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Super! Du hast es geschafft! Sieh dir jetzt an, wie es weiter geht:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="H3L-bN-xdA">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Super! Du hast es gefunden! Sieh dir jetzt an, wie es weiter geht:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="H3L-bN-xdA">
                                         <rect key="frame" x="47" y="105" width="226" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -254,7 +254,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jpz-LC-X1f">
                                 <rect key="frame" x="126" y="243" width="69" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Zum Start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -266,6 +266,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="KSz-uO-56e"/>
+                    <connections>
+                        <outlet property="successLabel" destination="v4t-n1-82K" id="8Eg-HT-n8q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ym-sp-byx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -299,7 +302,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="FXL-va-yVa"/>
+        <segue reference="zQY-fT-prx"/>
         <segue reference="Vfa-Ww-Ek6"/>
     </inferredMetricsTieBreakers>
 </document>

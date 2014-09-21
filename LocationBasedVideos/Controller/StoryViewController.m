@@ -48,7 +48,10 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [self.story reset];
+    
     UINavigationController *navController = segue.destinationViewController;
+    
     TransitionViewController *controller  = (TransitionViewController *)navController.topViewController;
     
     controller.pool = self.story.pools[0];
