@@ -62,8 +62,14 @@
     [super viewDidAppear:animated];
     
     if (self.shouldContinueOnAppear) {
-        //Start Segue to Jump to next Controller
-        [self performSegueWithIdentifier:@"nextVideo" sender:self];
+        if (
+            self.video.pool.unwatchedVideos.count == 0 &&
+            self.video.pool.nextPool == nil
+            ) {
+            [self performSegueWithIdentifier:@"success" sender:self];
+        }else{
+            [self performSegueWithIdentifier:@"nextVideo" sender:self];
+        }
     }
 }
 
@@ -80,6 +86,7 @@
         
         distance = (100 - rssi) / 3.0;
     }
+    NSLog(@"Distance %f",distance);
     
     if (distance > 7.0) {
         distance = 100.0;
@@ -104,8 +111,6 @@
         [self.signalStrenghtView pop_addAnimation:animation forKey:kPOPViewScaleXY];
     }
     animation.toValue = [NSValue valueWithCGPoint:CGPointMake(distance, distance)];
-    
-    
 }
 
 - (IBAction)didTapPlayButton:(id)sender {
@@ -124,12 +129,14 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    TransitionViewController *controller = segue.destinationViewController;
-    
-    if (self.video.pool.unwatchedVideos.count == 0) {
-        controller.pool = self.video.pool.nextPool;
-    }else{
-        controller.pool = self.video.pool;
+    if ([segue.identifier isEqualToString:@"nextVideo"]) {
+        TransitionViewController *controller = segue.destinationViewController;
+        
+        if (self.video.pool.unwatchedVideos.count == 0) {
+            controller.pool = self.video.pool.nextPool;
+        }else{
+            controller.pool = self.video.pool;
+        }
     }
 }
 

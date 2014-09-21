@@ -34,6 +34,7 @@
 		0A956CA619CDCD4E003DD5BE /* story-3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0A956CA319CDCD4E003DD5BE /* story-3.jpeg */; };
 		0A956CA919CDCFAA003DD5BE /* trailer.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0A956CA819CDCFAA003DD5BE /* trailer.mp4 */; };
 		0A956CAB19CDD005003DD5BE /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A956CAA19CDD005003DD5BE /* MediaPlayer.framework */; };
+		0AC0F59419CE5B6400569B6C /* SuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC0F59319CE5B6400569B6C /* SuccessViewController.m */; };
 		C012246F1EAB48F0A07AC18C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A588DEB1F84DF986D6454D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,8 @@
 		0A956CA319CDCD4E003DD5BE /* story-3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "story-3.jpeg"; path = "Assets/story-3.jpeg"; sourceTree = "<group>"; };
 		0A956CA819CDCFAA003DD5BE /* trailer.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = trailer.mp4; path = Assets/trailer.mp4; sourceTree = "<group>"; };
 		0A956CAA19CDD005003DD5BE /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		0AC0F59219CE5B6400569B6C /* SuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuccessViewController.h; path = Controller/SuccessViewController.h; sourceTree = "<group>"; };
+		0AC0F59319CE5B6400569B6C /* SuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuccessViewController.m; path = Controller/SuccessViewController.m; sourceTree = "<group>"; };
 		AF7741BEB05843098632C93B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		E0A588DEB1F84DF986D6454D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -191,6 +194,8 @@
 				0A5EC7DF19CDD5E0005C22EB /* TransitionViewController.m */,
 				0A5EC7E119CDE371005C22EB /* VideoViewController.h */,
 				0A5EC7E219CDE371005C22EB /* VideoViewController.m */,
+				0AC0F59219CE5B6400569B6C /* SuccessViewController.h */,
+				0AC0F59319CE5B6400569B6C /* SuccessViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -403,6 +408,7 @@
 				0A956C6A19CD9653003DD5BE /* main.m in Sources */,
 				0A5EC7E319CDE371005C22EB /* VideoViewController.m in Sources */,
 				0A956C9419CDB836003DD5BE /* Story.m in Sources */,
+				0AC0F59419CE5B6400569B6C /* SuccessViewController.m in Sources */,
 				0A5EC7E619CDE73C005C22EB /* Pool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
