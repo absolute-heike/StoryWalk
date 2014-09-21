@@ -35,6 +35,8 @@
 		0A956CA919CDCFAA003DD5BE /* trailer.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0A956CA819CDCFAA003DD5BE /* trailer.mp4 */; };
 		0A956CAB19CDD005003DD5BE /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A956CAA19CDD005003DD5BE /* MediaPlayer.framework */; };
 		0AC0F59419CE5B6400569B6C /* SuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC0F59319CE5B6400569B6C /* SuccessViewController.m */; };
+		0AC0F59719CE630F00569B6C /* story-4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0AC0F59519CE630F00569B6C /* story-4.jpeg */; };
+		0AC0F59819CE630F00569B6C /* story-5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0AC0F59619CE630F00569B6C /* story-5.jpeg */; };
 		C012246F1EAB48F0A07AC18C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A588DEB1F84DF986D6454D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +96,8 @@
 		0A956CAA19CDD005003DD5BE /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		0AC0F59219CE5B6400569B6C /* SuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuccessViewController.h; path = Controller/SuccessViewController.h; sourceTree = "<group>"; };
 		0AC0F59319CE5B6400569B6C /* SuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuccessViewController.m; path = Controller/SuccessViewController.m; sourceTree = "<group>"; };
+		0AC0F59519CE630F00569B6C /* story-4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "story-4.jpeg"; path = "Assets/story-4.jpeg"; sourceTree = "<group>"; };
+		0AC0F59619CE630F00569B6C /* story-5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "story-5.jpeg"; path = "Assets/story-5.jpeg"; sourceTree = "<group>"; };
 		AF7741BEB05843098632C93B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		E0A588DEB1F84DF986D6454D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -234,6 +238,8 @@
 				0A956CA119CDCD4E003DD5BE /* story-1.jpeg */,
 				0A956CA219CDCD4E003DD5BE /* story-2.jpeg */,
 				0A956CA319CDCD4E003DD5BE /* story-3.jpeg */,
+				0AC0F59519CE630F00569B6C /* story-4.jpeg */,
+				0AC0F59619CE630F00569B6C /* story-5.jpeg */,
 				0A956CA819CDCFAA003DD5BE /* trailer.mp4 */,
 				0A5EC7F019CE1E7F005C22EB /* Storywalk1.mp4 */,
 				0A5EC7F119CE1E7F005C22EB /* Storywalk2.mp4 */,
@@ -338,6 +344,8 @@
 			files = (
 				0A956C7319CD9653003DD5BE /* Main.storyboard in Resources */,
 				0A956CA619CDCD4E003DD5BE /* story-3.jpeg in Resources */,
+				0AC0F59719CE630F00569B6C /* story-4.jpeg in Resources */,
+				0AC0F59819CE630F00569B6C /* story-5.jpeg in Resources */,
 				0A956C7819CD9653003DD5BE /* LaunchScreen.xib in Resources */,
 				0A5EC7F519CE1E7F005C22EB /* Storywalk3.mp4 in Resources */,
 				0A956C7519CD9653003DD5BE /* Images.xcassets in Resources */,
@@ -532,6 +540,7 @@
 			baseConfigurationReference = AF7741BEB05843098632C93B /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = LocationBasedVideos/PrefixHeader.pch;
@@ -548,6 +557,7 @@
 			baseConfigurationReference = AF7741BEB05843098632C93B /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = LocationBasedVideos/PrefixHeader.pch;

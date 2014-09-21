@@ -24,4 +24,7 @@
 - (void)loadStory:(void (^)(NSArray *pools))completion;
 - (void)reset;
 
++ (NSString *)dummyStoriesJSON;
++ (NSString *)dummyPoolsJSON;
+
 @end
