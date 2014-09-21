@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="zep-Z7-Dir">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="zep-Z7-Dir">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -23,7 +23,7 @@
             </objects>
             <point key="canvasLocation" x="348.80000000000001" y="319.02666666666664"/>
         </scene>
-        <!--Stories-->
+        <!--Stories View Controller - Stories-->
         <scene sceneID="Zry-kt-MRd">
             <objects>
                 <viewController title="Stories" id="Kpx-gC-vGh" customClass="StoriesViewController" sceneMemberID="viewController">
@@ -222,11 +222,19 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wao-RA-h5j">
+                                <rect key="frame" x="95" y="527" width="205" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="WKw-Vr-G2f"/>
                     <connections>
+                        <outlet property="debugLabel" destination="wao-RA-h5j" id="NxB-cY-sge"/>
                         <outlet property="signalStrenghtView" destination="ft8-mp-Imu" id="BQ9-X2-XMR"/>
                         <outlet property="successView" destination="YOU-Gh-QhK" id="nhW-bO-EWS"/>
                         <segue destination="kus-3F-gmt" kind="push" identifier="nextVideo" id="FXL-va-yVa"/>
@@ -302,7 +310,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="zQY-fT-prx"/>
+        <segue reference="FXL-va-yVa"/>
         <segue reference="Vfa-Ww-Ek6"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -12,6 +12,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "TransitionViewController.h"
 #import "SuccessViewController.h"
+#import <Tweaks/FBTweakInline.h>
 
 
 @interface VideoViewController ()<CLLocationManagerDelegate>
@@ -20,6 +21,7 @@
 
 @property (nonatomic, weak) IBOutlet UIView *signalStrenghtView;
 @property (weak, nonatomic) IBOutlet UIView *successView;
+@property (weak, nonatomic) IBOutlet UILabel *debugLabel;
 
 @property (strong, nonatomic) CLBeaconRegion *myBeaconRegion;
 @property (strong, nonatomic) CLLocationManager *locationManager;
@@ -84,9 +86,14 @@
         NSInteger rssi = ABS(beacon.rssi);
         
         distance = (100 - rssi) / 3.0;
+        distance *= self.video.place.beaconFactor;
     }
     
-    if (distance > 7.0) {
+    if(FBTweakValue(@"DEBUG", @"DEGUG", @"DEBUG Mode", NO)){
+        self.debugLabel.text = [NSString stringWithFormat:@"distance: %f",distance];
+    }
+    
+    if (distance > FBTweakValue(@"Distance", @"Beacon Threshold", @"Threshold", 10.0)) {
         distance = 100.0;
         [manager stopRangingBeaconsInRegion:self.myBeaconRegion];
         

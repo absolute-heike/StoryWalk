@@ -19,6 +19,7 @@
 @property (nonatomic, strong) NSString  *beaconUDID;
 @property NSInteger                     beaconMajor;
 @property NSInteger                     beaconMinor;
+@property CGFloat                       beaconFactor;
 
 @property (nonatomic, strong) NSString  *name;
 @property (nonatomic, strong) NSString  *videoID;
