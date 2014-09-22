@@ -16,4 +16,3 @@ xcuserdata
 Docs/*
 !Docs/doxygen.conf
 
-Pods/**
